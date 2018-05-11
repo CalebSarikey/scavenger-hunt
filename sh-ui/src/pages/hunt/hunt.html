@@ -1,0 +1,27 @@
+<!--
+  Generated template for the HuntPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title *ngIf="hunt">{{hunt.name}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list *ngIf="hunt.items">
+    <ion-item text-center *ngIf="!isInProgress">
+      <ion-icon style="color:green" name="checkmark"></ion-icon> Congratulations!
+    </ion-item>
+    <button ion-item *ngFor="let item of hunt.items" [disabled]="isDone(item)" (click)="completeItem(item)">
+      {{ item.label }}
+      <ion-icon name="play" item-end *ngIf="!isDone(item)"></ion-icon>
+      <ion-icon style="color:green" name="checkmark" item-end *ngIf="isDone(item)"></ion-icon>
+    </button>
+  </ion-list>
+</ion-content>

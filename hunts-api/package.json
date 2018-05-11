@@ -9,9 +9,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.235.1",
     "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
     "express": "^4.16.2",
+    "mongodb": "^3.0.5",
+    "morgan": "^1.9.0",
     "nodemon": "^1.17.2",
-    "mongodb": "^3.0.5"
+    "winston": "^2.4.2"
   }
 }
